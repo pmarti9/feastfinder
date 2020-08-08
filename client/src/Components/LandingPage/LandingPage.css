@@ -1,0 +1,82 @@
+body {
+    background-image: url("./Images/food2.png");
+    background-color: #ffffff;
+  }
+  
+  .headerBtn {
+      background-color: #ffffff;
+      border: 2px solid #f7931e;
+      margin: 3px;
+      font-size: 100%;
+      text-decoration: underline;
+      color: #f7931e;
+    }
+    
+    .headerBtn:hover {
+      background-color: #f7931e;
+      border: 2px solid #6a8c51;
+      font-size: 100%;
+      text-decoration: underline;
+      color: #ffffff;
+    }
+    
+    .headLink:link {
+      color: #f7931e;
+    }
+    
+    .headLink:hover {
+      color: #ffffff;
+    }
+    
+    .headLink:visited {
+      color: #6a8c51;
+    }
+  
+  .logoColumn {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .logo {
+      max-width: 50%;
+      align-items: center;
+  }
+  
+  .searchRecipe {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .recipeBtn:hover {
+    background-color: #ffffff;
+    border: 2px solid #f7931e;
+    margin: 3px;
+    font-size: 150%;
+    text-decoration: underline;
+    color: #f7931e;
+  }
+  
+  .recipeBtn {
+    background-color: #f7931e;
+    border: 2px solid #ffffff;
+    margin: 3px;
+    font-size: 150%;
+    text-decoration: underline;
+    color: #ffffff;
+  }
+  
+  .rsLink:link {
+    color: #ffffff;
+  }
+  
+  .rsLink:hover {
+    color: #f7931e;
+  }
+  
+  .rsLink:visited {
+    color: #6a8c51;
+  }
+  
+  .searchIngredient {
+    text-align: center;
+  }
