@@ -12,22 +12,22 @@ function LandingPage() {
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
                             <button className="btn btn-primary headerBtn" type="button">
-                                <a href="https://utahutes.com/sports/football" className="headLink">Register
+                                <a href="#" className="headLink">Register
                                     <span className="sr-only">(current)</span>
                                 </a>
                             </button>
                         </li>
                         <li className="nav-item active">
                             <button className="btn btn-primary headerBtn" type="button">
-                                <a href="https://www.espn.com/" className="headLink">Login
+                                <a href="#" className="headLink">Login
                                     <span className="sr-only">(current)</span>
                                 </a>
                             </button>
                         </li>
                     </ul>
                 </div>
-        </nav>
-    </header>
+        < /nav>
+    < /header>
     <div className="row logoRow">
         <div className="col-lg-12 logoColumn">
             <br />
@@ -42,12 +42,12 @@ function LandingPage() {
         <div className="col-md-3"></div>
         <div className="col-md-3 searchRecipe">
             <button className="btn btn-primary recipeBtn" type="button">
-                <a className="rsLink" href="https://saltcityhoops.com/">Recipe Search</a>
+                <a className="rsLink" href="#">Recipe Search</a>
             </button>
         </div>
         <div className="col-md-3 searchIngredient">
             <button className="btn btn-primary recipeBtn" type="button">
-                <a className="rsLink" href="https://www.nba.com/jazz/?tmd=1">Ingredient Search</a>
+                <a className="rsLink" href="#">Ingredient Search</a>
             </button>
         </div>
         <div className="col-md-3"></div>

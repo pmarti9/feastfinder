@@ -1,8 +1,8 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import "./Recipe.js";
-import { createWorker } from 'Tesseract.js';
-import Tesseract from 'Tesseract.js'
+import { createWorker } from 'tesseract.js';
+
 
 function App() {
 const [value, setValue] = useState({});
