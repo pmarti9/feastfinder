@@ -3,7 +3,7 @@ export class Recipe {
         this.recipe = recipe;
     }
     parse(){
-        let name, 
+        let name 
         return {
             name,
             ingredients: [],
