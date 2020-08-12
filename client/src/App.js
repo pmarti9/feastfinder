@@ -1,20 +1,22 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import "./Recipe.js";
-import { createWorker } from 'Tesseract.js';
-import Tesseract from 'Tesseract.js'
+import { createWorker } from 'tesseract.js';
+import Recipe from "../src/Recipe"
 
 function App() {
 const [value, setValue] = useState({});
 const [image, setImage] = useState();
 const [ocr, setOcr] = useState();
-const [recipe, setRecipe] = useState({
+const [Recipe, setRecipe] = useState({ 
   //Fields for recipes
   name: '',
   ingredients: '',
   cookTime: 0,
   temp: ['F', 'C']
 });
+
+
 const worker = createWorker({
   logger: m => {console.log(m);setValue(m)},
 });
