@@ -3,6 +3,13 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require('mongoose');
+//mongo databaseurl and collections
+const databaseurl = "ffdatabase"
+const collections = ["users"];
+const db = mongojs(databaseurl, collections);
+db.on("error", error => {
+  console.log("Database Error:", error);
+});
 
 
 // Define middleware here
