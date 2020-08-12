@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import "./Recipe.js";
 import { createWorker } from 'tesseract.js';
-import Recipe from "../src/Recipe"
 
 function App() {
 const [value, setValue] = useState({});
