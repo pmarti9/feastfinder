@@ -1,4 +1,4 @@
-body {
+/* body {
     background-image: url("./Images/food2.png");
     background-color: #ffffff;
   }
@@ -31,7 +31,7 @@ body {
     
     .headLink:visited {
       color: #6a8c51;
-    }
+    } */
   
   .logoColumn {
     text-align: center;
@@ -46,24 +46,37 @@ body {
   .searchRecipe {
     text-align: center;
     align-items: center;
+    margin: 0px 15px 0px 15px;
+    max-width: 25%;
+    padding: 0rem;
   }
   
-  .recipeBtn:hover {
+  .recipeSearchBtn:hover {
     background-color: #ffffff;
     border: 2px solid #f7931e;
     margin: 3px;
-    font-size: 150%;
+    min-width: 110px;
+    font-size: 125%;
+    text-align: center;
+    align-items: center;
     text-decoration: underline;
     color: #f7931e;
+    padding-left: 3px;
+    padding-right: 3px;
   }
   
-  .recipeBtn {
+  .recipeSearchBtn {
     background-color: #f7931e;
     border: 2px solid #ffffff;
     margin: 3px;
-    font-size: 150%;
+    min-width: 110px;
+    font-size: 125%;
+    text-align: center;
+    align-items: center;
     text-decoration: underline;
     color: #ffffff;
+    padding-left: 3px;
+    padding-right: 3px;
   }
   
   .rsLink:link {
@@ -78,6 +91,21 @@ body {
     color: #6a8c51;
   }
   
-  .searchIngredient {
+  .searchLinksRow {
+    display: flex;
+    min-width: 100%;
+    align-items: center;
+  }
+
+  .searchRecipe {
     text-align: center;
+    align-items: center;
+  }
+
+  .emptyCol {
+    text-align: center;
+    max-width: 25%;
+    min-width: 10%;
+    border: 2px;
+    border-color: black;
   }
