@@ -21,35 +21,6 @@ import RecipeSearch from "./Components/RecipeSearch/RecipeSearch";
 
 
 function App() {
-<<<<<<< HEAD
-const [value, setValue] = useState({});
-const [image, setImage] = useState();
-const [ocr, setOcr] = useState();
-const [Recipe, setRecipe] = useState({ 
-  //Fields for recipes
-  name: '',
-  ingredients: '',
-  cookTime: 0,
-  temp: ['F', 'C']
-});
-
-
-const worker = createWorker({
-  logger: m => {console.log(m);setValue(m)},
-});
-const doOCR = async () => {
-  await worker.load();
-  await worker.loadLanguage('eng');
-  await worker.initialize('eng');
-  const { data : { text } } = await worker.recognize(image);
-  setOcr(text);
-};
-useEffect(() => {
-  doOCR();
-}, [image]);
-
-useEffect(() => console.log(ocr), [ocr])
-=======
   const [value, setValue] = useState({});
   const [image, setImage] = useState();
   const [ocr, setOcr] = useState();
@@ -80,7 +51,6 @@ useEffect(() => console.log(ocr), [ocr])
   }, [image]);
 
   useEffect(() => console.log(ocr), [ocr]);
->>>>>>> origin
 
   return (
     // Router
