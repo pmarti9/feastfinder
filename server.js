@@ -4,8 +4,9 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require('mongoose');
 //mongo databaseurl and collections
+// lines 8-13 .. is this in the server file or can i use the routes folder and reference it here.
 const databaseurl = "ffdatabase"
-const collections = ["users"];
+const collections = ["users","recipes"];
 const db = mongojs(databaseurl, collections);
 db.on("error", error => {
   console.log("Database Error:", error);
