@@ -54,12 +54,11 @@ function App() {
   useEffect(() => console.log(ocr), [ocr]);
 
   return (
-    // Router
     <Router>
       <div>
         <Header />
         <Switch>
-          <Route exact path={["/", "LandingPage"]}>
+          <Route exact path={["/", "/LandingPage"]}>
             <LandingPage />
           </Route>
           <Route exact path={["/UserPage"]}>
