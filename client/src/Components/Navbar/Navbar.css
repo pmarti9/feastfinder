@@ -1,0 +1,52 @@
+.landingNavbar {
+  align-items: center;
+  background-color: #ffffff;
+  display: -webkit-box;
+}
+
+.altLogo {
+  display: inherit;
+  max-width: 55px;
+  padding: 0px;
+  margin: 3px;
+}
+
+.nav.link {
+  text-decoration: underline;
+}
+
+.headerBtn {
+  background-color: #ffffff;
+  border: 2px solid #f7931e;
+  margin: 5px;
+  font-size: 100%;
+  text-decoration: underline;
+  color: #f7931e;
+  align-items: center;
+  text-align: center;
+}
+
+.headerBtn:hover {
+  background-color: #f7931e;
+  border: 2px solid #6a8c51;
+  margin: 5px;
+  font-size: 100%;
+  text-decoration: underline;
+  color: #ffffff;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-Link {
+  font-size: 100%;
+  text-decoration: underline;
+  color: #f7931e;
+  align-items: center;
+}
+
+.nav-Link:hover {
+  font-size: 100%;
+  text-decoration: underline;
+  color: #ffffff;
+  align-items: center;
+}
