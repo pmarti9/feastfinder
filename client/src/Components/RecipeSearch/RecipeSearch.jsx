@@ -1,52 +1,57 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // React-Bootstrap elements
 import * as ReactBootstrap from "react-bootstrap";
 // React-Bootstrap-Table2
-import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+import BootstrapTable from "react-bootstrap-table-next";
+// React-Bootstrap Table2 Paginator
+import paginationFactory from "react-bootstrap-table2-paginator";
 // CSS
-import './RecipeSearch.css';
-
-
+import "./RecipeSearch.css";
+//Axios
+import axios from "axios";
 
 const RecipeSearch = () => {
-    return(
-       <div>
-           <ReactBootstrap.Row>
-           <ReactBootstrap.Col className="IngredientsSearchCol">
-           <ReactBootstrap.Container className="searchIngredientContain">
+  const [recipe, setRecipe] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const getRecipeData = async () => {
+    try {
+      const data = await axios.get(
+        "https://api.spoonacular.com/recipes/complexSearch?apiKey=3dde0b9a1cc842ccbc355ad7e0d0a50c"
+      );
+      console.log(data);
+      setRecipe(data.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  const columns = [
+    { keyField: "id", text: "Recipe Id" },
+    { dataField: "title", text: "Recipe Title" },
+    { dataField: "image", img: "Picture" },
+  ];
 
-           {/* <ReactBootstrap.table class="ReactBootstrap.table table-striped">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th># of Posts</th>
-								<th>See Author's Posts</th>
-								<th>New Post</th>
-								<th>Delete Author</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr id="form-row">
-								<form id="author-form">
-									<td colspan="4">
-										<input placeholder="Enter a name" id="author-name" type="text" />
-									</td>
-									<td><button type="submit" class="btn btn-success">Create Author</button>
-									</td>
-								</form>
-							</tr>
-						</tbody>
-					</ReactBootstrap.table> */}
+  useEffect(() => {
+    getRecipeData();
+  }, []);
 
-           </ReactBootstrap.Container>
-           </ReactBootstrap.Col>
-           <ReactBootstrap.Col className="recipesWidget">
-
-           </ReactBootstrap.Col>
-           </ReactBootstrap.Row>
-       </div>       
-    );
-}
+  return (
+    <div>
+      <ReactBootstrap.Row>
+        <ReactBootstrap.Col className="IngredientsSearchCol">
+          <ReactBootstrap.Container className="searchIngredientContain">
+            <BootstrapTable
+              keyField="id"
+              data={recipe}
+              columns={columns}
+              pagination={paginationFactory}
+            />
+          </ReactBootstrap.Container>
+        </ReactBootstrap.Col>
+        <ReactBootstrap.Col className="recipesWidget"></ReactBootstrap.Col>
+      </ReactBootstrap.Row>
+    </div>
+  );
+};
 
 export default RecipeSearch;
