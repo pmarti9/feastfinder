@@ -20,7 +20,6 @@ import RecipeSearch from "./Components/RecipeSearch/RecipeSearch";
 
 
 
-
 function App() {
   const [value, setValue] = useState({});
   const [image, setImage] = useState();
