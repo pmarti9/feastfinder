@@ -3,7 +3,7 @@ import React from "react";
 // React-Bootstrap elements
 import * as ReactBootstrap from "react-bootstrap";
 // React-Bootstrap-Table2
-import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
+// import '../TestingPage/node_modules/react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 // CSS
 import "./UserPage.css";
 
