@@ -1,21 +1,19 @@
-.landingNavbar {
+/* Navbar CSS */
+
+/* .landingNavbar {
   align-items: center;
   background-color: #ffffff;
   display: -webkit-box;
-}
+} */
 
-.altLogo {
+#altLogo {
   display: inherit;
   max-width: 55px;
   padding: 0px;
   margin: 3px;
 }
 
-.nav.link {
-  text-decoration: underline;
-}
-
-.headerBtn {
+/* .headerBtn {
   background-color: #ffffff;
   border: 2px solid #f7931e;
   margin: 5px;
@@ -35,18 +33,27 @@
   color: #ffffff;
   align-items: center;
   text-align: center;
-}
+} */
 
-.nav-Link {
+#navbarLink {
   font-size: 100%;
   text-decoration: underline;
   color: #f7931e;
-  align-items: center;
+  /* align-items: center; */
 }
 
-.nav-Link:hover {
+#navbarLink:hover {
   font-size: 100%;
   text-decoration: underline;
-  color: #ffffff;
-  align-items: center;
+  color: #215720;
+  /* align-items: center; */
+}
+
+/* CSS for small mobile horizontal screen */
+
+@media only screen and (max-height: 350px) and (orientation: landscape) {
+  #header {
+    padding-bottom: -10px !important;
+    padding-top: -10px !important;
+  }
 }
