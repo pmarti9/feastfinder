@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import "./Recipe.js";
 import { createWorker } from "tesseract.js";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import * as ReactBootstrap from "react-bootstrap";
+import BootstrapTable from 'react-bootstrap-table-next';
 
 // Start Importing Components
 import Header from "./Components/Navbar/Navbar";
@@ -17,7 +18,6 @@ import Footer from "./Components/Footer/Footer";
 import IngredientSearch from "./Components/IngredientSearch/IngredientSearch";
 import RecipeSearch from "./Components/RecipeSearch/RecipeSearch";
 // End Importing Components
-
 
 
 function App() {
@@ -53,12 +53,14 @@ function App() {
   useEffect(() => console.log(ocr), [ocr]);
 
   return (
-    // Router
     <Router>
       <div>
         <Header />
         <Switch>
-          <Route exact path={["/", "LandingPage"]}>
+          <Route exact path={["/RecipeSearch"]}>
+            <RecipeSearch />
+          </Route>
+          <Route exact path={["/LandingPage"]}>
             <LandingPage />
           </Route>
           <Route exact path={["/UserPage"]}>
@@ -67,7 +69,7 @@ function App() {
           <Route exact path={["/MyRecipes"]}>
             <MyRecipes />
           </Route>
-          <Route exact path={["/Register"]}>
+          <Route exact path={["/","/Register"]}>
             <Register />
           </Route>
           <Route exact path={["/Login"]}>
@@ -75,9 +77,6 @@ function App() {
           </Route>
           <Route exact path={["/IngredientSearch"]}>
             <IngredientSearch />
-          </Route>
-          <Route exact path={["/RecipeSearch"]}>
-            <RecipeSearch />
           </Route>
         </Switch>
         <Footer />

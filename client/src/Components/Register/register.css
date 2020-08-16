@@ -1,0 +1,209 @@
+/* Register CSS */
+
+#registerContainer {
+  margin-top: 100px;
+  width: 40%;
+  height: 60%;
+  background-color: #f7931e;
+}
+#middleRowCol,
+#btnRowCol {
+  text-align: center;
+}
+#emailLabel {
+  margin-top: 10px;
+}
+#nameLabel {
+  margin-top: 10px;
+}
+#registerBtn:hover {
+  background-color: #ffffff;
+  border: 2px solid #f7931e;
+  margin: 10px;
+  min-width: 110px;
+  font-size: 125%;
+  text-align: center;
+  align-items: center;
+  text-decoration: underline;
+  color: #f7931e;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#registerBtn {
+  background-color: #f7931e;
+  border: 2px solid #ffffff;
+  margin: 10px;
+  min-width: 110px;
+  font-size: 125%;
+  text-align: center;
+  align-items: center;
+  text-decoration: underline;
+  color: #ffffff;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+/* Mobile portrait */
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  #registerContainer {
+    min-width: 95%;
+    max-width: 98%;
+    max-height: 80%;
+    background-color: #f7931e;
+    margin-top: 100px;
+  }
+  #formTRLeft {
+    min-width: 90%;
+    max-width: 98%;
+    margin-bottom: -20px;
+    align-items: center;
+  }
+  #formTRRight {
+      margin: 0px 0px 10px 0px;
+      min-width: 90%;
+      max-width: 98%;
+      align-items: center;
+  }
+  #emailShare {
+    color: #ffffff;
+    margin: -10px 0px 10px 0px;
+  }
+  #formBRLeft {
+    min-width: 90%;
+    max-width: 98%;
+    margin-bottom: -20px;
+    align-items: center;
+  }
+  #formBRRight {
+      margin: 10px 0px 10px 0px;
+      min-width: 90%;
+      max-width: 98%;
+      align-items: center;
+  }
+}
+
+/* CSS for large mobile horizontal screen */
+
+@media only screen and (max-height: 1100px) and (orientation: landscape) {
+    #registerContainer {
+      max-width: 90%;
+      min-width: 85%;
+      max-height: 60%;
+      background-color: #f7931e;
+      margin-top: 100px;
+    }
+  
+    /* #emailLabel {
+      margin-top: -5px;
+      margin-bottom: -7px;
+    }
+    #nameLabel {
+      margin-top: 10px;
+      margin-bottom: -7px;
+    } */
+  
+    /* #email-input {
+      margin-bottom: -5px;
+    } */
+    #emailShare {
+      color: #ffffff;
+      margin: 10px 0px 10px 0px;
+    }
+  
+    /* #PWLabel {
+      margin-top: -35px;
+      margin-bottom: -15px;
+    }
+    #PWFormGrp {
+      margin-top: -10px;
+    }
+    #password-input {
+      margin-bottom: -12px;
+    }
+  
+    #confirmPWLabel {
+      margin-top: -35px;
+      margin-bottom: -15px;
+    }
+    #confirmPWFormGrp {
+      margin-top: -10px;
+    } */
+  
+    #registerBtn {
+      margin: 10px 0px 30px 0px;
+      background-color: #f7931e;
+      border: 2px solid #ffffff;
+      max-width: 90px;
+      min-width: 90px;
+      max-height: 40px;
+      min-height: 40px;
+      padding-top: inherit;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+    }
+  }
+
+/* CSS for small mobile horizontal screen */
+
+@media only screen and (max-height: 360px) and (orientation: landscape) {
+  #registerContainer {
+    max-width: 90%;
+    min-width: 85%;
+    max-height: 60%;
+    background-color: #f7931e;
+    margin-top: 88px;
+  }
+
+  #emailLabel {
+    margin-top: -5px;
+    margin-bottom: -7px;
+  }
+  #nameLabel {
+    margin-top: -5px;
+    margin-bottom: -7px;
+  }
+
+  #email-input {
+    margin-bottom: -5px;
+  }
+  #emailShare {
+    color: #ffffff;
+    margin: -10px 0px 5px 0px;
+  }
+
+  #PWLabel {
+    margin-top: -35px;
+    margin-bottom: -15px;
+  }
+  #PWFormGrp {
+    margin-top: -10px;
+  }
+  #password-input {
+    margin-bottom: -12px;
+  }
+
+  #confirmPWLabel {
+    margin-top: -35px;
+    margin-bottom: -15px;
+  }
+  #confirmPWFormGrp {
+    margin-top: -10px;
+  }
+
+  #registerBtn {
+    margin: 2px 0px 6px 0px;
+    background-color: #f7931e;
+    border: 2px solid #ffffff;
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 35px;
+    min-height: 35px;
+    padding-top: inherit;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+}
