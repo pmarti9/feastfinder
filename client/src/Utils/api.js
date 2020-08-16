@@ -6,4 +6,10 @@ export default {
   logout: function () {
     return axios.get("/api/logout");
   },
+  submitRecipe: function(data) {
+    return axios.post("/api/Recipe", data)
+  },
+  getRecipe: function(){
+    return axios.get("api/getRecipes")
+  }
 };
