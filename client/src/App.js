@@ -57,7 +57,7 @@ function App() {
       <div>
         <Header />
         <Switch>
-          <Route exact path={["/","/RecipeSearch"]}>
+          <Route exact path={["/RecipeSearch"]}>
             <RecipeSearch />
           </Route>
           <Route exact path={["/LandingPage"]}>
@@ -72,7 +72,7 @@ function App() {
           <Route exact path={["/Register"]}>
             <Register />
           </Route>
-          <Route exact path={["/Login"]}>
+          <Route exact path={["/","/Login"]}>
             <Login />
           </Route>
           <Route exact path={["/IngredientSearch"]}>

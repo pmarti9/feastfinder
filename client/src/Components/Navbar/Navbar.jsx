@@ -14,22 +14,22 @@ function Navbar() {
         expand="md"
         bg="light"
         variant="light"
-        className="header"
+        id="header"
       >
         <ReactBootstrap.Navbar.Brand href="#LandingPage">
           <img
             src="./Images/altLogo.png"
             alt="Alternate logo"
-            className="altLogo"
+            id="altLogo"
           ></img>
         </ReactBootstrap.Navbar.Brand>
         <ReactBootstrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <ReactBootstrap.Navbar.Collapse id="responsive-navbar-nav" className="collapseMenu">
-          <ReactBootstrap.Nav className="mr-auto">
-            <ReactBootstrap.Nav.Link href="#Register">
+          <ReactBootstrap.Nav className="mr-auto" id="mr-autoId">
+            <ReactBootstrap.Nav.Link href="#Register" id="navbarLink">
               Register
             </ReactBootstrap.Nav.Link>
-            <ReactBootstrap.Nav.Link href="#Login">
+            <ReactBootstrap.Nav.Link href="#Login" id="navbarLink">
               Login
             </ReactBootstrap.Nav.Link>
           </ReactBootstrap.Nav>

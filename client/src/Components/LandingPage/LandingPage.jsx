@@ -10,12 +10,12 @@ function LandingPage() {
   return (
     <div>
       {/* <ReactBootstrap.Container fluid className="LandingContainer"> */}
-        <ReactBootstrap.Row className="logoRow justify-content-md-center">
-          <ReactBootstrap.Col className="logoColumn">
+        <ReactBootstrap.Row id="logoRow" className="justify-content-md-center">
+          <ReactBootstrap.Col id="logoColumn">
             <br />
             <br />
             <img
-              className="logo"
+              id="logo"
               alt="Feast Finder Logo"
               src="./Images/logo.png"
             />
@@ -24,31 +24,32 @@ function LandingPage() {
           </ReactBootstrap.Col>
         </ReactBootstrap.Row>
 
-        <ReactBootstrap.Row className="row searchLinksRow justify-content-md-center">
-          <ReactBootstrap.Col className="emptyCol"></ReactBootstrap.Col>
-          <ReactBootstrap.Col className="searchRecipe">
+        <ReactBootstrap.Row className="row justify-content-md-center" id="searchLinksRow">
+          <ReactBootstrap.Col id="emptyCol"></ReactBootstrap.Col>
+          <ReactBootstrap.Col id="searchRecipe">
             <ReactBootstrap.Button
               variant="warning"
               size="sm"
-              className="recipeSearchBtn justify-content-md-center"
-            >
-              <a className="rsLink" href="#RecipeSearch">
+              className="justify-content-md-center"
+              id="recipeSearchBtn">
+              <a id="rsLink" href="#RecipeSearch">
                 Recipe Search
               </a>
             </ReactBootstrap.Button>
           </ReactBootstrap.Col>
-          <ReactBootstrap.Col className="searchRecipe">
+          <ReactBootstrap.Col id="searchIngredient">
             <ReactBootstrap.Button
               varient="Warning"
               size="sm"
-              className="recipeSearchBtn justify-content-md-center"
+              className="justify-content-md-center"
+              id="ingredientSearchBtn"
             >
-              <a className="rsLink" href="#IngredientSearch">
+              <a id="rsLink" href="#IngredientSearch">
                 Ingredient Search
               </a>
             </ReactBootstrap.Button>
           </ReactBootstrap.Col>
-          <ReactBootstrap.Col className="emptyCol"></ReactBootstrap.Col>
+          <ReactBootstrap.Col id="emptyCol"></ReactBootstrap.Col>
         </ReactBootstrap.Row>
       {/* </ReactBootstrap.Container> */}
     </div>
