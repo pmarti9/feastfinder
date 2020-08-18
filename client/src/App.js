@@ -55,6 +55,7 @@ function App() {
   return (
     <Router>
       <div>
+        <div>
         <Header />
         <Switch>
           <Route exact path={["/RecipeSearch"]}>
@@ -79,6 +80,7 @@ function App() {
             <IngredientSearch />
           </Route>
         </Switch>
+        </div>
         <Footer />
       </div>
     </Router>
