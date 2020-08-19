@@ -5,6 +5,7 @@ module.exports = function(app) {
         res.render("Landing",{});
       });
       
+
       app.get("/Register", (req, res) => {
         // If the user already has an account send them to the members page
         if (req.user) {
@@ -18,9 +19,12 @@ module.exports = function(app) {
       app.get("/login", (req, res) => {
         // If the user already has an account send them to the members page
         if (req.user) {
+
           res.redirect("/UserPage");
+
         }
-        res.sendFile(path.join(__dirname, "../src/pages/login.html"));
+        res.sendFile(path.join(__dirname, "../client/src/Components/Login.Login.jsx"));
+        // res.sendFile(path.join(__dirname, "../src/pages/login.html"));
       });
       
     

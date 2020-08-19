@@ -32,7 +32,7 @@ function LandingPage() {
               size="sm"
               className="justify-content-md-center"
               id="recipeSearchBtn">
-              <a id="rsLink" href="#RecipeSearch">
+              <a id="rsLink" href="/RecipeSearch">
                 Recipe Search
               </a>
             </ReactBootstrap.Button>
@@ -44,7 +44,7 @@ function LandingPage() {
               className="justify-content-md-center"
               id="ingredientSearchBtn"
             >
-              <a id="rsLink" href="#IngredientSearch">
+              <a id="iSLink" href="/IngredientSearch">
                 Ingredient Search
               </a>
             </ReactBootstrap.Button>

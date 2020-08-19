@@ -1,5 +1,4 @@
 import React from "react";
-
 import * as ReactBootstrap from "react-bootstrap";
 import signup from "../../Pages/js/signup.js";
 import "./register.css";
