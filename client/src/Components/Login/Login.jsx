@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 // React-Bootstrap elements
 import * as ReactBootstrap from "react-bootstrap";
 import API from "./../../Utils/api";
 import "./Login.css";
 
-function Login() {
+function Login() { 
+  const [email, setEmail] = useState();
+  const [name, setName] = useState();
+  const [password, setPassword]= useState();
+
   function formSubmit(e) {
     e.preventDefault();
     API.login({
-      email: "",
-      password: "password",
+      email: email,
+      name: name, 
+      password: password,
     }).then((response) => {
       console.log(response);
     });
@@ -32,6 +37,16 @@ function Login() {
               type="email"
               placeholder="Enter email"
               id="email-input"
+              onChange={e=>setEmail(e.target.value)}
+            />
+             <ReactBootstrap.Form.Label id="nameLabel">
+              Full Name
+            </ReactBootstrap.Form.Label>
+            <ReactBootstrap.Form.Control
+              type="name"
+              placeholder="Enter name"
+              id="name-input"
+              onChange={e=>setName(e.target.value)}
             />
             <ReactBootstrap.Form.Text id="emailShare">
               We'll never share your email.
@@ -49,6 +64,7 @@ function Login() {
               type="password"
               placeholder="Password"
               id="password-input"
+              onChange={e=>setPassword(e.target.value)}
             />
           </ReactBootstrap.Form.Group>
           <ReactBootstrap.Button
@@ -56,9 +72,7 @@ function Login() {
             variant="primary"
             size="sm"
             type="submit"
-            onClick={(e) => {
-              formSubmit(e);
-            }}
+            onClick={formSubmit}
           >
             Login
           </ReactBootstrap.Button>

@@ -14,6 +14,7 @@ app.post("/api/login", passport.authenticate("local"), (req, res) => {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
+      name: req.user.name,
       id: req.user.id
     });
   });
@@ -21,9 +22,12 @@ app.post("/api/login", passport.authenticate("local"), (req, res) => {
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
+
+  //api routes for users
   app.post("/api/signup", (req, res) => {
     db.User.create({
       email: req.body.email,
+      name: req.body.name,
       password: req.body.password
     })
       .then(() => {
@@ -78,8 +82,9 @@ app.post("/api/login", passport.authenticate("local"), (req, res) => {
       },
       {
         $set: {
-          title: req.body.title,
-          note: req.body.note,
+          email: req.body.email,
+          name: req.body.name,
+          password: req.body.password,
           modified: Date.now()
         }
       },
@@ -110,6 +115,95 @@ app.post("/api/login", passport.authenticate("local"), (req, res) => {
   
   app.delete("/clearall", (req, res) => {
     db.users.remove({}, (error, response) => {
+      if (error) {
+        res.send(error);
+      } else {
+        res.send(response);
+      }
+    });
+  });
+
+
+  //user added recipes api routes
+
+  app.post("/submit", (req, res) => {
+    console.log(req.body);
+  
+    db.recipes.insert(req.body, (error, data) => {
+      if (error) {
+        res.send(error);
+      } else {
+        res.send(data);
+      }
+    });
+  });
+  
+  app.get("/all", (req, res) => {
+    db.recipes.find({}, (error, data) => {
+      if (error) {
+        res.send(error);
+      } else {
+        res.json(data);
+      }
+    });
+  });
+  
+  app.get("/find/:id", (req, res) => {
+    db.recipes.findOne(
+      {
+        _id: mongojs.ObjectId(req.params.id)
+      },
+      (error, data) => {
+        if (error) {
+          res.send(error);
+        } else {
+          res.send(data);
+        }
+      }
+    );
+  });
+  
+  app.post("/update/:id", (req, res) => {
+    db.recipes.update(
+      {
+        _id: mongojs.ObjectId(req.params.id)
+      },
+      {
+        $set: {
+          title: req.body.title,
+          temp: req.body.temp,
+          cookTime: req.body.cookTime,
+          ingredients: req.body.ingredients,
+          modified: Date.now()
+        }
+      },
+      (error, data) => {
+        if (error) {
+          res.send(error);
+        } else {
+          res.send(data);
+        }
+      }
+    );
+  });
+  
+  app.delete("/delete/:id", (req, res) => {
+    db.recipes.remove(
+      {
+        _id: mongojs.ObjectID(req.params.id)
+      },
+      (error, data) => {
+        if (error) {
+          res.send(error);
+        } else {
+          res.send(data);
+        }
+      }
+    );
+  });
+  
+  app.delete("/clearall", (req, res) => {
+    db.recipes.remove({}, (error, response) => {
       if (error) {
         res.send(error);
       } else {
