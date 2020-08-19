@@ -9,16 +9,18 @@ const userSeed = [
     {
         email: "parkerjmartin883@gmail.com",
         password: "password",
+        name: "Parker Martin",
         date: new Date(Date.now())
     },
     {
         email: "test@test.com",
         password: "testpassword",
+        name: "Tester McTesterson",
         date: new Date(Date.now())
     }
 ]
 
-db.user
+db.users
 .remove({})
 .then(()=> db.user.collection.insertMany(userSeed))
 .then(data=>{
