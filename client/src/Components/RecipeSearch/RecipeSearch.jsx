@@ -51,8 +51,6 @@ const RecipeSearch = () => {
                 <ReactBootstrap.Spinner animation="grow" />
                 </>
             )}
-
-
       {/* <ReactBootstrap.Row>
         <ReactBootstrap.Col className="IngredientsSearchCol">
           <ReactBootstrap.Container className="searchIngredientContain">
@@ -64,5 +62,4 @@ const RecipeSearch = () => {
     </div>
   );
 };
-
 export default RecipeSearch;
