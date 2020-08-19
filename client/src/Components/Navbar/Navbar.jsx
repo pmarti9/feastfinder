@@ -16,7 +16,7 @@ function Navbar() {
         variant="light"
         id="header"
       >
-        <ReactBootstrap.Navbar.Brand href="#LandingPage">
+        <ReactBootstrap.Navbar.Brand href="/LandingPage">
           <img
             src="./Images/altLogo.png"
             alt="Alternate logo"
@@ -26,10 +26,10 @@ function Navbar() {
         <ReactBootstrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <ReactBootstrap.Navbar.Collapse id="responsive-navbar-nav" className="collapseMenu">
           <ReactBootstrap.Nav className="mr-auto" id="mr-autoId">
-            <ReactBootstrap.Nav.Link href="#Register" id="navbarLink">
+            <ReactBootstrap.Nav.Link href="/Register" id="navbarLink">
               Register
             </ReactBootstrap.Nav.Link>
-            <ReactBootstrap.Nav.Link href="#Login" id="navbarLink">
+            <ReactBootstrap.Nav.Link href="/Login" id="navbarLink">
               Login
             </ReactBootstrap.Nav.Link>
           </ReactBootstrap.Nav>
