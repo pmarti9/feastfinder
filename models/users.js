@@ -34,6 +34,6 @@ users.addHook("beforeCreate", (user) => {
         null
     )
 })
-const Users = mongoose.model("Users", users)
+const Users = mongoose.model("users", users)
 
 module.exports = Users

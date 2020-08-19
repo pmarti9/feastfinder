@@ -1,8 +1,7 @@
 import React from "react";
-
 import * as ReactBootstrap from "react-bootstrap";
-// import signup from "../../Pages/js/signup.js";
-import "./Register.css";
+import signup from "../../Pages/js/signup.js";
+import "./register.css";
 
 function Register() {
   return (
@@ -44,13 +43,13 @@ function Register() {
                 </ReactBootstrap.FormGroup>
               </ReactBootstrap.Col>
             </ReactBootstrap.Row>
-            <ReactBootstrap.Row id="middleRow">
+            {/* <ReactBootstrap.Row id="middleRow">
               <ReactBootstrap.Col id="middleRowCol">
               <ReactBootstrap.Form.Text id="emailShare">
                     We'll never share personal information.
                   </ReactBootstrap.Form.Text>
               </ReactBootstrap.Col>
-            </ReactBootstrap.Row>
+            </ReactBootstrap.Row> */}
 
             <ReactBootstrap.Row id="formBottomRow">
               <ReactBootstrap.Col id="formBRLeft">
@@ -68,7 +67,7 @@ function Register() {
                   />
                 </ReactBootstrap.Form.Group>
               </ReactBootstrap.Col>
-              <ReactBootstrap.Col id="formBRRight">
+              {/* <ReactBootstrap.Col id="formBRRight">
                 <ReactBootstrap.Form.Group
                   controlId="formBasicPassword"
                   id="confirmPWFormGrp"
@@ -80,9 +79,9 @@ function Register() {
                     type="password"
                     placeholder="Confirm Password"
                     id="password-input"
-                  />
-                </ReactBootstrap.Form.Group>
-              </ReactBootstrap.Col>
+                  /> */}
+                {/* </ReactBootstrap.Form.Group>
+              </ReactBootstrap.Col> */}
             </ReactBootstrap.Row>
 
             {/* <ReactBootstrap.Button

@@ -40,7 +40,7 @@ const RecipeSearch = () => {
     getRecipeData();
   }, []);
 
-  return (
+ return (
     <div className="recipeSearch">
       <ReactBootstrap.Container id='resultsContainer'>
       {loading ? (
@@ -57,9 +57,6 @@ const RecipeSearch = () => {
     </div>
   );
 };
-
-
-
 
 
 

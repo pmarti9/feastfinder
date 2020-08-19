@@ -2,15 +2,16 @@ const path = require("path")
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
     app.get("/", (req, res) => {
-        res.render("landing",{});
+        res.render("Landing",{});
       });
       
-      app.get("/register", (req, res) => {
+
+      app.get("/Register", (req, res) => {
         // If the user already has an account send them to the members page
         if (req.user) {
-          res.redirect("/members");
+          res.redirect("/Members");
         }
-        res.render("register",{});
+        res.render("Register",{});
       });
       
     
@@ -18,8 +19,9 @@ module.exports = function(app) {
       app.get("/login", (req, res) => {
         // If the user already has an account send them to the members page
         if (req.user) {
-          // res.redirect("/members");
-          res.redirect("/UsersPage");
+
+          res.redirect("/UserPage");
+
         }
         res.sendFile(path.join(__dirname, "../client/src/Components/Login.Login.jsx"));
         // res.sendFile(path.join(__dirname, "../src/pages/login.html"));
@@ -30,7 +32,5 @@ module.exports = function(app) {
       // If a user who is not logged in tries to access this route they will be redirected to the signup page
       app.get("/UserPage", isAuthenticated, (req, res) => {
         res.render("UserPage",{});
-      // app.get("/members", isAuthenticated, (req, res) => {
-      //   res.render("members",{});
       });
 }
