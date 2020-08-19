@@ -1,0 +1,98 @@
+/* Login Page CSS */
+
+#loginContainer {
+  margin-top: 100px;
+  width: 40%;
+  height: 60%;
+  background-color: #f7931e;
+}
+
+#emailLabel {
+    margin-top: 10px;
+}
+
+#loginBtn:hover {
+  background-color: #ffffff;
+  border: 2px solid #f7931e;
+  margin: 10px;
+  min-width: 110px;
+  font-size: 125%;
+  text-align: center;
+  align-items: center;
+  text-decoration: underline;
+  color: #f7931e;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#loginBtn {
+  background-color: #f7931e;
+  border: 2px solid #ffffff;
+  margin: 10px;
+  min-width: 110px;
+  font-size: 125%;
+  text-align: center;
+  align-items: center;
+  text-decoration: underline;
+  color: #ffffff;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+/* Mobile portrait */
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    #loginContainer {
+        min-width: 80%;
+        max-width: 90%;
+        max-height: 80%;
+        background-color: #f7931e;
+        margin-top: 100px;
+      }
+    }
+
+/* CSS for small mobile horizontal screen */
+@media only screen and (max-height: 350px) and (orientation: landscape) {
+  #loginContainer {
+    max-width: 75%;
+    max-height: 60%;
+    background-color: #f7931e;
+    margin-top: 88px;
+  }
+
+  #emailLabel {
+    margin-top: -5px;
+    margin-bottom: -7px;
+  }
+
+  #email-input {
+    margin-bottom: -5px;
+  }
+  #emailShare {
+    color: #ffffff;
+  }
+
+  #PWLabel {
+    margin-top: -35px;
+    margin-bottom: -15px;
+  }
+  #PWFormGrp {
+    margin-top: -10px;
+  }
+  #password-input {
+      margin-bottom: -12px;
+  }
+
+  #loginBtn {
+    margin: 0px 0px 3px 0px;
+    background-color: #f7931e;
+    border: 2px solid #ffffff;
+    max-width: 60px;
+    min-width: 60px;
+    max-height: 35px;
+    min-height: 35px;
+    padding-top: inherit;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+}
