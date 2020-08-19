@@ -16,7 +16,11 @@ function Navbar() {
         variant="light"
         id="header"
       >
+<<<<<<< HEAD
         <ReactBootstrap.Navbar.Brand href='/'>
+=======
+        <ReactBootstrap.Navbar.Brand href="/LandingPage">
+>>>>>>> origin
           <img
             src="./Images/altLogo.png"
             alt="Alternate logo"
