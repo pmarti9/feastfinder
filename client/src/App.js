@@ -30,7 +30,7 @@ function App() {
           <Route exact path={["/RecipeSearch"]}>
             <RecipeSearch />
           </Route>
-          <Route exact path={["/LandingPage"]}>
+          <Route exact path={["/","/Home"]}>
             <LandingPage />
           </Route>
           <Route exact path={["/UserPage"]}>
@@ -39,7 +39,7 @@ function App() {
           <Route exact path={["/MyRecipes"]}>
             <MyRecipes />
           </Route>
-          <Route exact path={["/","/Register"]}>
+          <Route exact path={["/Register"]}>
             <Register />
           </Route>
           <Route exact path={["/Login"]}>

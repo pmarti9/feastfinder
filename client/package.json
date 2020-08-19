@@ -15,8 +15,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^2.1.1",
     "tesseract.js": "^2.1.1",
-    "filepond-plugin-image-preview": "^4.6.4",
-
+    "filepond-plugin-image-preview": "^4.6.4"
   },
   "scripts": {
     "start": "react-scripts start",
