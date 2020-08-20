@@ -11,51 +11,98 @@ import paginationFactory from "react-bootstrap-table2-paginator";
 import "./IngredientSearch.css";
 import App from "../../App";
 //Axios
-import axios from "axios";
+// import axios from "axios";
+import logo from '../../logo.svg'
 
-const IngredientSearch = () => {
-  const [Recipes, setRecipe] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const getRecipeData = async () => {
-    try {
-      const data = await axios.get(
-        "https://nba-players.herokuapp.com/players-stats"
-      );
-      console.log(data);
-      setRecipe(data.data);
-      setLoading(true);
-    } catch (e) {
-      console.log(e);
+const request = require('request');
+const qs = require('qs');
+
+function IngredientSearch() {
+
+  var options = {
+    method: 'GET',
+    url: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/findByIngredients",
+    headers: { 
+      'cache-control': 'no-cache',
+      'Content-Type': 'application/json',
+      'X-RapidAPI-Host': "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+      'X-RapidAPI-Key': "509e21ec31mshde58c454c0b5794p1ef877jsn842050049fd2",
+      'header1': 'header-value-1'
+    },
+    qs: { 
+      number: '5',
+      ranking: '1',
+      ignorePantry: 'false',
+      ingredients: 'apples%252Cflour%252Csugar'       
     }
   };
-  const columns = [
-    { keyField: "id", integer: "id" },
-    { dataField: "recipe", text: "Recipe Name" },
-    { dataField: "author", text: "Author" },
-    { dataField: "picture", text: "Picture" },
-  ];
-
-  useEffect(() => {
-    getRecipeData();
-  }, []);
-
+  
+  request(options, function (error, response, body) {
+    if (error) throw new Error(error);
+    console.log(body);
+    console.log(options);
+  });
   return (
-    <div className="IngredientSearch">
-      <ReactBootstrap.Container id='resultsContainer'>
-      {loading ? (
-        <BootstrapTable id='resultsTable'
-          keyField="recipe"
-          data={Recipes}
-          columns={columns}
-          pagination={paginationFactory()}
-          />
-      ) : (
-        <ReactBootstrap.Spinner animation="border" />
-      )}
-          </ReactBootstrap.Container>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+          Learn React
+        </a>
+      </header>
     </div>
   );
-};
+}
+//   const [Recipes, setRecipe] = useState([]);
+//   const [loading, setLoading] = useState(false);
+//   const getRecipeData = async () => {
+//     try {
+//       const data = await axios.get(
+//         "https://nba-players.herokuapp.com/players-stats"
+//       );
+//       console.log(data);
+//       setRecipe(data.data);
+//       setLoading(true);
+//     } catch (e) {
+//       console.log(e);
+//     }
+//   };
+//   const columns = [
+//     { keyField: "id", integer: "id" },
+//     { dataField: "recipe", text: "Recipe Name" },
+//     { dataField: "author", text: "Author" },
+//     { dataField: "picture", text: "Picture" },
+//   ];
+
+//   useEffect(() => {
+//     getRecipeData();
+//   }, []);
+
+//   return (
+//     <div className="IngredientSearch">
+//       <ReactBootstrap.Container id='resultsContainer'>
+//       {loading ? (
+//         <BootstrapTable id='resultsTable'
+//           keyField="recipe"
+//           data={Recipes}
+//           columns={columns}
+//           pagination={paginationFactory()}
+//           />
+//       ) : (
+//         <ReactBootstrap.Spinner animation="border" />
+//       )}
+//           </ReactBootstrap.Container>
+//     </div>
+//   );
+// };
 
 // return (
 //   <div>
