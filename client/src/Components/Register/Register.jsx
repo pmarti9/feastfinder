@@ -36,7 +36,7 @@ function Register() {
                     Your Name
                   </ReactBootstrap.Form.Label>
                   <ReactBootstrap.Form.Control
-                    type="email"
+                    type="name"
                     placeholder="Your Name"
                     id="name-input"
                   />
@@ -102,6 +102,7 @@ function Register() {
               variant="primary"
               size="sm"
               type="submit"
+              // onClick={}
             >
               Register
             </ReactBootstrap.Button>
