@@ -10,5 +10,8 @@ import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.m
 // react-Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+console.log(process.env)
+
 ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();
