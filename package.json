@@ -9,7 +9,7 @@
     "start:dev": "env-cmd dev concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
-    "build": "enc-cmd prod cd client && npm run build",
+    "build": "env-cmd prod cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
   "author": "",

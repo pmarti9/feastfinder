@@ -21,7 +21,7 @@ const RecipeSearch = () => {
   const getRecipeData = async () => {
     try {
       const data = await axios.get(
-        {process.env.RECIPES_URL}
+        // {process.env.RECIPES_URL}
       );
       console.log(data);
       setRecipe(data.data);
