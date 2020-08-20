@@ -6,14 +6,14 @@ import "./Login.css";
 
 function Login() { 
   const [email, setEmail] = useState();
-  const [name, setName] = useState();
+  // const [name, setName] = useState();
   const [password, setPassword]= useState();
 
   function formSubmit(e) {
     e.preventDefault();
     API.login({
       email: email,
-      name: name, 
+      // name: name, 
       password: password,
     }).then((response) => {
       console.log(response);
@@ -39,7 +39,7 @@ function Login() {
               id="email-input"
               onChange={e=>setEmail(e.target.value)}
             />
-             <ReactBootstrap.Form.Label id="nameLabel">
+             {/* <ReactBootstrap.Form.Label id="nameLabel">
               Full Name
             </ReactBootstrap.Form.Label>
             <ReactBootstrap.Form.Control
@@ -47,9 +47,9 @@ function Login() {
               placeholder="Enter name"
               id="name-input"
               onChange={e=>setName(e.target.value)}
-            />
+            /> */}
             <ReactBootstrap.Form.Text id="emailShare">
-              We'll never share your email.
+              {/* We'll never share your email. */}
             </ReactBootstrap.Form.Text>
           </ReactBootstrap.FormGroup>
 

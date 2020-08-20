@@ -1,4 +1,8 @@
 import axios from "axios";
+const RECIPESURL = process.env.REACT_APP_RECIPES_URL;
+const APIKEY = process.env.REACT_APP_API_KEY;
+
+
 export default {
   login: function (data) {
     return axios.post("/api/login", data);
@@ -15,4 +19,7 @@ export default {
   getUserRecipes: function() {
     return axios.get("api/userRecipes")
   }
+  // getRecipeData: function(APIKEY) {
+  //   return axios.get("api/recipeSearch", APIKEY)
+  // }
 };
