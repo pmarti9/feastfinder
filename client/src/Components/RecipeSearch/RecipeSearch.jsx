@@ -48,24 +48,61 @@ function RecipeSearch() {
     console.log(options);
   });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div>
+          <ReactBootstrap.Container
+            className="justify-content-md-center"
+            id="recipeSearchContainer"
           >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+            <h1 id="recipeSearchHeader">Recipe Search</h1>
+            <ReactBootstrap.Form className="recipeSearchForm" id="recipeSearchFormID">
+              <ReactBootstrap.FormGroup
+                controlId="formRecipeSearch"
+                id="recipeSearchFormGrp"
+              >
+                <ReactBootstrap.InputGroup
+                  className="mb-3"
+                  id="recipeSearchInputGroup"
+                >
+                  <ReactBootstrap.InputGroup.Prepend id="searchIconPrepend">
+                    <ReactBootstrap.Button
+                      variant="outline-secondary"
+                      id="searchBtn"
+                    >
+                      <img
+                        src={require('../../Images/Search_Icon_Orange.png')}
+                        id="searchIcon"
+                      />
+                    </ReactBootstrap.Button>
+                  </ReactBootstrap.InputGroup.Prepend>
+                  <ReactBootstrap.FormControl aria-describedby="basic-addon1" />
+                </ReactBootstrap.InputGroup>
+              </ReactBootstrap.FormGroup>
+            </ReactBootstrap.Form>
+          </ReactBootstrap.Container>
+        </div>
+      );
+    }
+
+
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
 
 // class RecipeSearchContainer extends Component {
 //   state = {

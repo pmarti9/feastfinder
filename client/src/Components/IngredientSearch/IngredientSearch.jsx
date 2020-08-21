@@ -15,7 +15,7 @@ import App from "../../App";
 import logo from '../../logo.svg'
 
 const request = require('request');
-const qs = require('qs');
+const qs = require('qs')
 
 function IngredientSearch() {
 
@@ -41,26 +41,98 @@ function IngredientSearch() {
     if (error) throw new Error(error);
     console.log(body);
     console.log(options);
+    console.log(response);
   });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+<div>
+          <ReactBootstrap.Container
+            className="justify-content-md-center"
+            id="recipeSearchContainer"
           >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+            <h1 id="recipeSearchHeader">Search for recipes by ingredient(s).</h1>
+            <ReactBootstrap.Form className="recipeSearchForm" id="recipeSearchFormID">
+              <ReactBootstrap.FormGroup
+                controlId="formRecipeSearch"
+                id="recipeSearchFormGrp"
+              >
+                <ReactBootstrap.InputGroup
+                  className="mb-3"
+                  id="recipeSearchInputGroup"
+                >
+                  <ReactBootstrap.InputGroup.Prepend id="searchIconPrepend">
+                    <ReactBootstrap.Button
+                      variant="outline-secondary"
+                      id="searchBtn"
+                    >
+                      <img
+                        src={require('../../Images/Search_Icon_Orange.png')}
+                        id="searchIcon"
+                      />
+                    </ReactBootstrap.Button>
+                  </ReactBootstrap.InputGroup.Prepend>
+                  <ReactBootstrap.FormControl aria-describedby="basic-addon1" />
+                </ReactBootstrap.InputGroup>
+              </ReactBootstrap.FormGroup>
+            </ReactBootstrap.Form>
+            <p id="commaSearch">Separate each ingredient with a comma</p>
+          </ReactBootstrap.Container>
+        </div>
+      );
+    }
+
+
+
+//   <div>
+//     <ReactBootstrap.Container
+//       id="ingredientSearchContainer"
+//       className="justify-content-md-center">
+//         <ReactBootstrap.Table className="table table-bordered table-responsive" id='ingredientSearchTable'>
+//           <ReactBootstrap.thead>
+//             <ReactBootstrap.tr>
+//               <ReactBootstrap.th scope='col'>Search Ingredients</ReactBootstrap.th>
+//               <ReactBootstrap.th scope='col'>
+//                 <ReactBootstrap.Button variant="primary">Add Ingredient</ReactBootstrap.Button>
+//               </ReactBootstrap.th>
+//             </ReactBootstrap.tr>
+//           </ReactBootstrap.thead>
+//           <ReactBootstrap.TBody id='ingredientSearchTableBody'>
+//             <ReactBootstrap.tr>
+
+//             </ReactBootstrap.tr>
+//           </ReactBootstrap.TBody>
+
+//         </ReactBootstrap.Table>
+//     </ReactBootstrap.Container>
+//   </div>
+// );
+// }
+
+
+
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
+
+
+
+
 //   const [Recipes, setRecipe] = useState([]);
 //   const [loading, setLoading] = useState(false);
 //   const getRecipeData = async () => {
@@ -103,31 +175,5 @@ function IngredientSearch() {
 //     </div>
 //   );
 // };
-
-// return (
-//   <div>
-//     <ReactBootstrap.Container
-//       id="ingredientSearchContainer"
-//       className="justify-content-md-center">
-//         <ReactBootstrap.Table className="table table-bordered table-responsive" id='ingredientSearchTable'>
-//           <ReactBootstrap.thead>
-//             <ReactBootstrap.tr>
-//               <ReactBootstrap.th scope='col'>Search Ingredients</ReactBootstrap.th>
-//               <ReactBootstrap.th scope='col'>
-//                 <ReactBootstrap.Button variant="primary">Add Ingredient</ReactBootstrap.Button>
-//               </ReactBootstrap.th>
-//             </ReactBootstrap.tr>
-//           </ReactBootstrap.thead>
-//           <ReactBootstrap.TBody id='ingredientSearchTableBody'>
-//             <ReactBootstrap.tr>
-
-//             </ReactBootstrap.tr>
-//           </ReactBootstrap.TBody>
-
-//         </ReactBootstrap.Table>
-//     </ReactBootstrap.Container>
-//   </div>
-// );
-//}
 
 export default IngredientSearch;
