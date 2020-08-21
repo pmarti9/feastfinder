@@ -11,28 +11,9 @@ import Spinner from 'react-bootstrap/Spinner'
 import "./RecipeSearch.css";
 //Axios
 import axios from "axios";
-<<<<<<< HEAD
-const env = require('env-cmd');
-
-
-
-const RecipeSearch = () => {
-  const [Recipes, setRecipe] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const getRecipeData = async () => {
-    try {
-      const data = await axios.get(
-        // {process.env.RECIPES_URL}
-      );
-      console.log(data);
-      setRecipe(data.data);
-      setLoading(true);
-    } catch (e) {
-      console.log(e);
-=======
-// API Headers
-import API from "../../Utils/RecipeSearchAPI"
-import logo from '../../logo.svg'
+// APx  I Headers
+import API from "../../Utils/RecipeSearchAPI";
+import logo from '../../logo.svg';
 
 
 const request = require('request');
@@ -58,7 +39,6 @@ function RecipeSearch() {
       offset: '0',
       type: "main course",
       query: 'burger'   
->>>>>>> origin
     }
   };
   

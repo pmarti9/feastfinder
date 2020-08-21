@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-import axios from "axios"; 
-=======
 import axios from "axios";
 const RECIPESURL = process.env.REACT_APP_RECIPES_URL;
 const APIKEY = process.env.REACT_APP_API_KEY;
 
 
->>>>>>> origin
 export default {
   login: function (data) {
     return axios.post("/api/login", data);
