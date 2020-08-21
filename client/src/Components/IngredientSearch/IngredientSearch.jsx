@@ -26,7 +26,7 @@ function IngredientSearch() {
       'cache-control': 'no-cache',
       'Content-Type': 'application/json',
       'X-RapidAPI-Host': "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-      'X-RapidAPI-Key': "509e21ec31mshde58c454c0b5794p1ef877jsn842050049fd2",
+      'X-RapidAPI-Key': "process.env.REACT_APP_API_KEY",
       'header1': 'header-value-1'
     },
     qs: { 
