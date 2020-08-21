@@ -11,9 +11,9 @@ import Spinner from 'react-bootstrap/Spinner'
 import "./RecipeSearch.css";
 //Axios
 import axios from "axios";
-// APx  I Headers
-import API from "../../Utils/RecipeSearchAPI";
-import logo from '../../logo.svg';
+// API Headers
+import API from "../../Utils/RecipeSearchAPI"
+import logo from '../../logo.svg'
 
 
 const request = require('request');
@@ -47,7 +47,7 @@ function RecipeSearch() {
     console.log(body);
     console.log(options);
   });
- return (
+  return (
         <div>
           <ReactBootstrap.Container
             className="justify-content-md-center"
