@@ -30,7 +30,7 @@ console.log(process.env.REACT_APP_INGREDIENTS_URL);
 
 function App() {
     return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <div>
         <Header />

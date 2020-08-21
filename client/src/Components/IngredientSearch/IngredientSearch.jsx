@@ -80,6 +80,7 @@ function IngredientSearch() {
         </div>
       );
     }
+<<<<<<< HEAD
 
 
 
@@ -176,4 +177,6 @@ function IngredientSearch() {
 //   );
 // };
 
+=======
+>>>>>>> origin
 export default IngredientSearch;
