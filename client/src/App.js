@@ -22,7 +22,7 @@ import RecipeSearch from "./Components/RecipeSearch/RecipeSearch";
 
 function App() {
     return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <div>
         <Header />
