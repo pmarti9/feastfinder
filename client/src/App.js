@@ -19,6 +19,14 @@ import IngredientSearch from "./Components/IngredientSearch/IngredientSearch";
 import RecipeSearch from "./Components/RecipeSearch/RecipeSearch";
 // End Importing Components
 
+require('dotenv').config();
+
+console.log(process.env.REACT_APP_API_KEY);
+console.log(process.env.REACT_APP_HOST_URL);
+console.log(process.env.REACT_APP_RECIPES_URL);
+console.log(process.env.REACT_APP_INGREDIENTS_URL);
+
+
 
 function App() {
     return (

@@ -26,7 +26,7 @@ function IngredientSearch() {
       'cache-control': 'no-cache',
       'Content-Type': 'application/json',
       'X-RapidAPI-Host': "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-      'X-RapidAPI-Key': "509e21ec31mshde58c454c0b5794p1ef877jsn842050049fd2",
+      'X-RapidAPI-Key': "process.env.REACT_APP_API_KEY",
       'header1': 'header-value-1'
     },
     qs: { 
@@ -80,4 +80,103 @@ function IngredientSearch() {
         </div>
       );
     }
+<<<<<<< HEAD
+
+
+
+//   <div>
+//     <ReactBootstrap.Container
+//       id="ingredientSearchContainer"
+//       className="justify-content-md-center">
+//         <ReactBootstrap.Table className="table table-bordered table-responsive" id='ingredientSearchTable'>
+//           <ReactBootstrap.thead>
+//             <ReactBootstrap.tr>
+//               <ReactBootstrap.th scope='col'>Search Ingredients</ReactBootstrap.th>
+//               <ReactBootstrap.th scope='col'>
+//                 <ReactBootstrap.Button variant="primary">Add Ingredient</ReactBootstrap.Button>
+//               </ReactBootstrap.th>
+//             </ReactBootstrap.tr>
+//           </ReactBootstrap.thead>
+//           <ReactBootstrap.TBody id='ingredientSearchTableBody'>
+//             <ReactBootstrap.tr>
+
+//             </ReactBootstrap.tr>
+//           </ReactBootstrap.TBody>
+
+//         </ReactBootstrap.Table>
+//     </ReactBootstrap.Container>
+//   </div>
+// );
+// }
+
+
+
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
+
+
+
+
+//   const [Recipes, setRecipe] = useState([]);
+//   const [loading, setLoading] = useState(false);
+//   const getRecipeData = async () => {
+//     try {
+//       const data = await axios.get(
+//         "https://nba-players.herokuapp.com/players-stats"
+//       );
+//       console.log(data);
+//       setRecipe(data.data);
+//       setLoading(true);
+//     } catch (e) {
+//       console.log(e);
+//     }
+//   };
+//   const columns = [
+//     { keyField: "id", integer: "id" },
+//     { dataField: "recipe", text: "Recipe Name" },
+//     { dataField: "author", text: "Author" },
+//     { dataField: "picture", text: "Picture" },
+//   ];
+
+//   useEffect(() => {
+//     getRecipeData();
+//   }, []);
+
+//   return (
+//     <div className="IngredientSearch">
+//       <ReactBootstrap.Container id='resultsContainer'>
+//       {loading ? (
+//         <BootstrapTable id='resultsTable'
+//           keyField="recipe"
+//           data={Recipes}
+//           columns={columns}
+//           pagination={paginationFactory()}
+//           />
+//       ) : (
+//         <ReactBootstrap.Spinner animation="border" />
+//       )}
+//           </ReactBootstrap.Container>
+//     </div>
+//   );
+// };
+
+=======
+>>>>>>> origin
 export default IngredientSearch;
